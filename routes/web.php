@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
     Route::middleware(['auth'])->group(function(){
         Route::get('/dashboard', Dashboard::class)->name('dashboard');
+        Route::get('/chat/{id}', Dashboard::class)->name('chat');
     
     });
     
@@ -63,8 +64,21 @@ use Illuminate\Support\Facades\Route;
 
         auth()->login($user);
 
-        toast("Account Created Successfully", 'success');
+        alert()->success('Success', 'Account Created Successfully');
 
         return redirect('/dashboard');
 
     })->name('post_register');
+     
+    Route::get('/logout', function () {
+    
+        auth()->logout();
+
+        alert()->success('Success', 'Logout Successfully');
+
+        return redirect()->route('home');
+
+    })->name('logout');
+
+    Route::get('/stream-ai-response', [Dashboard::class, 'streamAIResponse'])
+    ->name('stream.ai.response');
