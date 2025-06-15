@@ -1,0 +1,2 @@
+# Brightmind
+AI course recommender
