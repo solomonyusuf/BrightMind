@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('/', HomePage::class)->name('home');
     Route::get('/contact', ContactPage::class)->name('contact');
-    Route::get('/dashboard', Dashboard::class)->name('dashboard');
+
+    Route::middleware(['auth'])->group(function(){
+        Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    
+    });
     
     //Auth
     Route::get('/login', LoginPage::class)->name('login');
@@ -29,6 +33,8 @@ use Illuminate\Support\Facades\Route;
 
         if (auth()->attempt($credentials, $request->boolean('remember'))) {
             $request->session()->regenerate();
+             toast("Login Successful", 'success');
+        
             return redirect()->intended('/dashboard');
         }
 
@@ -56,6 +62,8 @@ use Illuminate\Support\Facades\Route;
         ]);
 
         auth()->login($user);
+
+        toast("Account Created Successfully", 'success');
 
         return redirect('/dashboard');
 

@@ -43,6 +43,7 @@
     @livewireStyles
 </head>
 <body>
+    @include('sweetalert::alert')
     <div id="app">
         {{ $slot }}
     </div>

@@ -1,3 +1,6 @@
+@php
+    $user = \App\Models\User::find(auth()?->user()?->id);
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +51,7 @@
     @livewireStyles
 </head>
 <body class="bg-chat-bg text-white  overflow-hidden">
+    @include('sweetalert::alert')
     <div class="flex h-screen">
         <!-- Sidebar -->
         <div id="sidebar" class="w-64 bg-sidebar-bg border-r border-gray-600 flex flex-col transition-transform duration-300 ease-in-out">
@@ -135,13 +139,11 @@
             <div class="p-4 border-t border-gray-600">
                 <div class="flex items-center space-x-3 p-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors">
                     <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
-                        </svg>
+                       <img src="{{ asset($user->image) }}" />
                     </div>
                     <div class="flex-1">
-                        <p class="text-sm font-medium">User</p>
-                        <p class="text-xs text-gray-400">Free Plan</p>
+                        <p class="text-sm font-medium">{{ $user->first_name.' '.$user->last_name}}</p>
+                        <p class="text-xs text-gray-400">User Account</p>
                     </div>
                     <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>

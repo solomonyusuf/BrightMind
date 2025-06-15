@@ -46,316 +46,55 @@
                     </div>
                 </div>
             </header>
-            <section class="section-courses">
-                <div class="section-padding padding-vertical-120x120">
+           <section class="section-home-showcase" style="margin-bottom: 20px;">
+                <div class="section-padding">
                     <div class="w-layout-blockcontainer container w-container">
-                        <div class="home-courses-title-wrapper">
-                            <h2 data-w-id="7facc727-d729-86be-16c1-bb2774420580"
-                                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;">
-                                Most Popular <span class="text-primary">Courses</span></h2>
-                            <div data-w-id="607fd7bb-657d-7ec0-51c2-da781d3fd513"
+                        <div class="section-inner showcase">
+                            <div id="w-node-c99c8050-fbb6-d3bd-83d9-051a6b1b7317-ff9ebd7f"
+                                data-w-id="c99c8050-fbb6-d3bd-83d9-051a6b1b7317"
                                 style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;"
-                                class="button-wrapper">
-                            </div>
-                        </div>
-                        <div class="collection-list-wrapper course w-dyn-list">
-                            <div data-w-id="955f5742-80b9-7b57-978a-4a5a7743fae9"
+                                class="showcase-left"><img
+                                    src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e6c01564adb65f75e_Showcase%20Image.webp"
+                                    loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px"
+                                    srcset="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e6c01564adb65f75e_Showcase%20Image-p-500.webp 500w, https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e6c01564adb65f75e_Showcase%20Image-p-800.webp 800w, https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e6c01564adb65f75e_Showcase%20Image-p-1080.webp 1080w, https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e6c01564adb65f75e_Showcase%20Image-p-1600.webp 1600w, https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e6c01564adb65f75e_Showcase%20Image-p-2000.webp 2000w, https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e6c01564adb65f75e_Showcase%20Image.webp 2428w"
+                                    alt="Showcase image" class="showcase-image"></div>
+                            <div id="w-node-_945ed56e-c694-1b7c-048e-9f00056d2e08-ff9ebd7f"
+                                data-w-id="945ed56e-c694-1b7c-048e-9f00056d2e08"
                                 style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;"
-                                role="list" class="collection-list course w-dyn-items">
-                                <div role="listitem" class="collection-item course w-dyn-item"><a
-                                        data-w-id="57d07c86-541e-3656-2c2d-5a6443649eed"
-                                        href="/our-courses/complete-digital-marketing-mastery-course"
-                                        class="course-item-main w-inline-block">
-                                        <div class="course-thumbnail"><img
-                                                src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b0d53900250a44170027b6_67b0aaa15999bc5036839496_Course%2520Thumbnail.webp"
-                                                loading="lazy" alt="Complete Digital Marketing Mastery Course"
-                                                class="image-full"
-                                                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
-                                            <div class="rating-tag"><img
-                                                    src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17d80b3babeab623b848a_Star%20Vector.svg"
-                                                    loading="lazy" alt="Rating Star" class="rating-star">
-                                                <div class="text-regular">4.6</div>
-                                            </div>
-                                        </div>
-                                        <div class="course-item-center-text">
-                                            <h3 class="text-xlarge">Complete Digital Marketing Mastery Course</h3>
-                                            <div class="course-info-tags">
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b0af7b52e9c6a7cf59aebe_Course%20Tag.svg"
-                                                        loading="lazy" alt="Lesson Icon" class="tag-image">
-                                                    <div class="caption-text">40 lesson</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2ac56540b2db6a9afc_Timer%20Tag.svg"
-                                                        loading="lazy" alt="Time Icon" class="tag-image">
-                                                    <div class="caption-text">4h 30m</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2a056bd817f13ca158_Education%20Tag.svg"
-                                                        loading="lazy" alt="Education Icon" class="tag-image">
-                                                    <div class="caption-text">811 students</div>
-                                                </div>
-                                            </div>
-                                            <div class="course-card-end">
-                                                <div class="mentor-info"><img
-                                                        src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b0d53900250a44170027b3_67b0aa1d5999bc5036831fd8_Mentor%2520image.png"
-                                                        loading="lazy" alt="Mentor Profile" class="mentorl-profile">
-                                                    <div class="reviewer-designation">
-                                                        <div class="font-width-700">Eleanor Pena</div>
-                                                    </div>
-                                                </div>
-                                                <div class="font-width-700">$32.00</div>
-                                            </div>
-                                        </div>
-                                    </a></div>
-                                <div role="listitem" class="collection-item course w-dyn-item"><a
-                                        data-w-id="57d07c86-541e-3656-2c2d-5a6443649eed"
-                                        href="/our-courses/entrepreneurship-business-growth-strategies-course"
-                                        class="course-item-main w-inline-block">
-                                        <div class="course-thumbnail"><img
-                                                src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f65082eb69c24fa1ffdf_Course%20Thumbnail%20(2).webp"
-                                                loading="lazy"
-                                                alt="Entrepreneurship &amp; Business Growth Strategies Course"
-                                                sizes="100vw"
-                                                srcset="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f65082eb69c24fa1ffdf_Course%20Thumbnail%20(2)-p-500.webp 500w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f65082eb69c24fa1ffdf_Course%20Thumbnail%20(2)-p-800.webp 800w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f65082eb69c24fa1ffdf_Course%20Thumbnail%20(2)-p-1080.webp 1080w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f65082eb69c24fa1ffdf_Course%20Thumbnail%20(2).webp 1460w"
-                                                class="image-full"
-                                                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
-                                            <div class="rating-tag"><img
-                                                    src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17d80b3babeab623b848a_Star%20Vector.svg"
-                                                    loading="lazy" alt="Rating Star" class="rating-star">
-                                                <div class="text-regular">4.6</div>
-                                            </div>
-                                        </div>
-                                        <div class="course-item-center-text">
-                                            <h3 class="text-xlarge">Entrepreneurship &amp; Business Growth Strategies
-                                                Course</h3>
-                                            <div class="course-info-tags">
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b0af7b52e9c6a7cf59aebe_Course%20Tag.svg"
-                                                        loading="lazy" alt="Lesson Icon" class="tag-image">
-                                                    <div class="caption-text">47 lesson</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2ac56540b2db6a9afc_Timer%20Tag.svg"
-                                                        loading="lazy" alt="Time Icon" class="tag-image">
-                                                    <div class="caption-text">11h 30m</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2a056bd817f13ca158_Education%20Tag.svg"
-                                                        loading="lazy" alt="Education Icon" class="tag-image">
-                                                    <div class="caption-text">423 students</div>
-                                                </div>
-                                            </div>
-                                            <div class="course-card-end">
-                                                <div class="mentor-info"><img
-                                                        src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f37f78236f23da8270b8_Author2.png"
-                                                        loading="lazy" alt="Mentor Profile" class="mentorl-profile">
-                                                    <div class="reviewer-designation">
-                                                        <div class="font-width-700">Guy Hawkins</div>
-                                                    </div>
-                                                </div>
-                                                <div class="font-width-700">$42.00</div>
-                                            </div>
-                                        </div>
-                                    </a></div>
-                                <div role="listitem" class="collection-item course w-dyn-item"><a
-                                        data-w-id="57d07c86-541e-3656-2c2d-5a6443649eed"
-                                        href="/our-courses/full-stack-web-development-bootcamp-program"
-                                        class="course-item-main w-inline-block">
-                                        <div class="course-thumbnail"><img
-                                                src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f601e3a3611ed64943a9_Course%20Thumbnail%20(3).webp"
-                                                loading="lazy" alt="Full-Stack Web Development Bootcamp Program"
-                                                sizes="100vw"
-                                                srcset="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f601e3a3611ed64943a9_Course%20Thumbnail%20(3)-p-500.webp 500w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f601e3a3611ed64943a9_Course%20Thumbnail%20(3)-p-800.webp 800w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f601e3a3611ed64943a9_Course%20Thumbnail%20(3)-p-1080.webp 1080w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f601e3a3611ed64943a9_Course%20Thumbnail%20(3).webp 1460w"
-                                                class="image-full"
-                                                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;">
-                                            <div class="rating-tag"><img
-                                                    src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17d80b3babeab623b848a_Star%20Vector.svg"
-                                                    loading="lazy" alt="Rating Star" class="rating-star">
-                                                <div class="text-regular">4.9</div>
-                                            </div>
-                                        </div>
-                                        <div class="course-item-center-text">
-                                            <h3 class="text-xlarge">Full-Stack Web Development Bootcamp Program</h3>
-                                            <div class="course-info-tags">
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b0af7b52e9c6a7cf59aebe_Course%20Tag.svg"
-                                                        loading="lazy" alt="Lesson Icon" class="tag-image">
-                                                    <div class="caption-text">32 lesson</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2ac56540b2db6a9afc_Timer%20Tag.svg"
-                                                        loading="lazy" alt="Time Icon" class="tag-image">
-                                                    <div class="caption-text">5h 00m</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2a056bd817f13ca158_Education%20Tag.svg"
-                                                        loading="lazy" alt="Education Icon" class="tag-image">
-                                                    <div class="caption-text">934 students</div>
-                                                </div>
-                                            </div>
-                                            <div class="course-card-end">
-                                                <div class="mentor-info"><img
-                                                        src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f62de106ce380dc5e3e3_Author3.png"
-                                                        loading="lazy" alt="Mentor Profile" class="mentorl-profile">
-                                                    <div class="reviewer-designation">
-                                                        <div class="font-width-700">Leslie Alexander</div>
-                                                    </div>
-                                                </div>
-                                                <div class="font-width-700">$29 .00</div>
-                                            </div>
-                                        </div>
-                                    </a></div>
-                                <div role="listitem" class="collection-item course w-dyn-item"><a
-                                        data-w-id="57d07c86-541e-3656-2c2d-5a6443649eed"
-                                        href="/our-courses/graphic-design-essentials-from-beginner-to-pro-guide"
-                                        class="course-item-main w-inline-block">
-                                        <div class="course-thumbnail"><img
-                                                src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f67384a678ab1b2761ae_Course%20Thumbnail%20(4).webp"
-                                                loading="lazy"
-                                                alt="Graphic Design Essentials: From Beginner to Pro Guide"
-                                                sizes="100vw"
-                                                srcset="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f67384a678ab1b2761ae_Course%20Thumbnail%20(4)-p-500.webp 500w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f67384a678ab1b2761ae_Course%20Thumbnail%20(4)-p-800.webp 800w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f67384a678ab1b2761ae_Course%20Thumbnail%20(4)-p-1080.webp 1080w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f67384a678ab1b2761ae_Course%20Thumbnail%20(4).webp 1460w"
-                                                class="image-full">
-                                            <div class="rating-tag"><img
-                                                    src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17d80b3babeab623b848a_Star%20Vector.svg"
-                                                    loading="lazy" alt="Rating Star" class="rating-star">
-                                                <div class="text-regular">4.7</div>
-                                            </div>
-                                        </div>
-                                        <div class="course-item-center-text">
-                                            <h3 class="text-xlarge">Graphic Design Essentials: From Beginner to Pro
-                                                Guide</h3>
-                                            <div class="course-info-tags">
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b0af7b52e9c6a7cf59aebe_Course%20Tag.svg"
-                                                        loading="lazy" alt="Lesson Icon" class="tag-image">
-                                                    <div class="caption-text">50 lesson</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2ac56540b2db6a9afc_Timer%20Tag.svg"
-                                                        loading="lazy" alt="Time Icon" class="tag-image">
-                                                    <div class="caption-text">12h 30m</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2a056bd817f13ca158_Education%20Tag.svg"
-                                                        loading="lazy" alt="Education Icon" class="tag-image">
-                                                    <div class="caption-text">512 students</div>
-                                                </div>
-                                            </div>
-                                            <div class="course-card-end">
-                                                <div class="mentor-info"><img
-                                                        src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f690a0d2678f4e381d1b_Author4.png"
-                                                        loading="lazy" alt="Mentor Profile" class="mentorl-profile">
-                                                    <div class="reviewer-designation">
-                                                        <div class="font-width-700">Darrell Steward</div>
-                                                    </div>
-                                                </div>
-                                                <div class="font-width-700">$45.00</div>
-                                            </div>
-                                        </div>
-                                    </a></div>
-                                <div role="listitem" class="collection-item course w-dyn-item"><a
-                                        data-w-id="57d07c86-541e-3656-2c2d-5a6443649eed"
-                                        href="/our-courses/personal-finance-smart-investment-strategies"
-                                        class="course-item-main w-inline-block">
-                                        <div class="course-thumbnail"><img
-                                                src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f700bf0024304ff7ff9c_Course%20Thumbnail%20(5).webp"
-                                                loading="lazy" alt="Personal Finance &amp; Smart Investment Strategies."
-                                                sizes="100vw"
-                                                srcset="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f700bf0024304ff7ff9c_Course%20Thumbnail%20(5)-p-500.webp 500w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f700bf0024304ff7ff9c_Course%20Thumbnail%20(5)-p-800.webp 800w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f700bf0024304ff7ff9c_Course%20Thumbnail%20(5)-p-1080.webp 1080w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f700bf0024304ff7ff9c_Course%20Thumbnail%20(5).webp 1460w"
-                                                class="image-full">
-                                            <div class="rating-tag"><img
-                                                    src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17d80b3babeab623b848a_Star%20Vector.svg"
-                                                    loading="lazy" alt="Rating Star" class="rating-star">
-                                                <div class="text-regular">4.9</div>
-                                            </div>
-                                        </div>
-                                        <div class="course-item-center-text">
-                                            <h3 class="text-xlarge">Personal Finance &amp; Smart Investment Strategies.
-                                            </h3>
-                                            <div class="course-info-tags">
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b0af7b52e9c6a7cf59aebe_Course%20Tag.svg"
-                                                        loading="lazy" alt="Lesson Icon" class="tag-image">
-                                                    <div class="caption-text">24 lesson</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2ac56540b2db6a9afc_Timer%20Tag.svg"
-                                                        loading="lazy" alt="Time Icon" class="tag-image">
-                                                    <div class="caption-text">4h 30m</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2a056bd817f13ca158_Education%20Tag.svg"
-                                                        loading="lazy" alt="Education Icon" class="tag-image">
-                                                    <div class="caption-text">256 students</div>
-                                                </div>
-                                            </div>
-                                            <div class="course-card-end">
-                                                <div class="mentor-info"><img
-                                                        src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f73b0e682692e6941f57_Author5.png"
-                                                        loading="lazy" alt="Mentor Profile" class="mentorl-profile">
-                                                    <div class="reviewer-designation">
-                                                        <div class="font-width-700">Cody Fisher</div>
-                                                    </div>
-                                                </div>
-                                                <div class="font-width-700">$36.00</div>
-                                            </div>
-                                        </div>
-                                    </a></div>
-                                <div role="listitem" class="collection-item course w-dyn-item"><a
-                                        data-w-id="57d07c86-541e-3656-2c2d-5a6443649eed"
-                                        href="/our-courses/ai-machine-learning-a-complete-guide-training"
-                                        class="course-item-main w-inline-block">
-                                        <div class="course-thumbnail"><img
-                                                src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67d06cf64bbafae0a7ed1586_Course%20Thumbnail%206.webp"
-                                                loading="lazy"
-                                                alt="AI &amp; Machine Learning: A Complete Guide Training" sizes="100vw"
-                                                srcset="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67d06cf64bbafae0a7ed1586_Course%20Thumbnail%206-p-500.webp 500w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67d06cf64bbafae0a7ed1586_Course%20Thumbnail%206-p-800.webp 800w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67d06cf64bbafae0a7ed1586_Course%20Thumbnail%206-p-1080.webp 1080w, https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67d06cf64bbafae0a7ed1586_Course%20Thumbnail%206.webp 1460w"
-                                                class="image-full">
-                                            <div class="rating-tag"><img
-                                                    src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17d80b3babeab623b848a_Star%20Vector.svg"
-                                                    loading="lazy" alt="Rating Star" class="rating-star">
-                                                <div class="text-regular">5</div>
-                                            </div>
-                                        </div>
-                                        <div class="course-item-center-text">
-                                            <h3 class="text-xlarge">AI &amp; Machine Learning: A Complete Guide Training
-                                            </h3>
-                                            <div class="course-info-tags">
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b0af7b52e9c6a7cf59aebe_Course%20Tag.svg"
-                                                        loading="lazy" alt="Lesson Icon" class="tag-image">
-                                                    <div class="caption-text">40 lesson</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2ac56540b2db6a9afc_Timer%20Tag.svg"
-                                                        loading="lazy" alt="Time Icon" class="tag-image">
-                                                    <div class="caption-text">5h 40m</div>
-                                                </div>
-                                                <div class="info-tag-course"><img
-                                                        src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67b17a2a056bd817f13ca158_Education%20Tag.svg"
-                                                        loading="lazy" alt="Education Icon" class="tag-image">
-                                                    <div class="caption-text">811 students</div>
-                                                </div>
-                                            </div>
-                                            <div class="course-card-end">
-                                                <div class="mentor-info"><img
-                                                        src="https://cdn.prod.website-files.com/67b0a2a78bdd71cbd0e27770/67b1f77f78236f23da8619b3_Author6.png"
-                                                        loading="lazy" alt="Mentor Profile" class="mentorl-profile">
-                                                    <div class="reviewer-designation">
-                                                        <div class="font-width-700">Kathryn Murphy</div>
-                                                    </div>
-                                                </div>
-                                                <div class="font-width-700">$40.00</div>
-                                            </div>
-                                        </div>
-                                    </a></div>
+                                class="showcase-center">
+                                <div class="showcase-contents top">
+                                    <div class="showcase-profile-images"><img
+                                            src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af74aa55a8f4a32f8d00f7_Profile.png"
+                                            loading="lazy" alt="Showcase Profile" class="profile-image"><img
+                                            src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af79d4fcd4580eb3eccec9_Profile3.png"
+                                            loading="lazy" alt="Showcase Profile" class="profile-image move-left"><img
+                                            src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af79d4f6535c6ae220c433_Profile2.png"
+                                            loading="lazy" alt="Showcase Profile" class="profile-image move-left"><img
+                                            src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af795e1227a554f85d4173_Profile1.png"
+                                            loading="lazy" alt="Showcase Profile" class="profile-image move-left"></div>
+                                    <h2 class="text-xlarge">We have 40+ Students</h2>
+                                </div>
+                                <div class="showcase-contents bottom">
+                                    <h2 class="text-xlarge normal-case">“Education is the most powerful weapon which you can use to change the world.”</h2>
+                                    <div class="people-info-wrapper">
+                                        <h3 class="text-large">Nelson M.</h3>
+                                        <div class="caption-text">Quote from a hero</div>
+                                    </div>
+                                </div>
                             </div>
+                            <div id="w-node-_674cacde-68ae-3bcf-706e-b60e9d4a314e-ff9ebd7f"
+                                data-w-id="674cacde-68ae-3bcf-706e-b60e9d4a314e"
+                                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;"
+                                class="showcase-right"><img
+                                    src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e2d01fbb80f633a37_Showcase%20Image%202.webp"
+                                    loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px"
+                                    srcset="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e2d01fbb80f633a37_Showcase%20Image%202-p-500.webp 500w, https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e2d01fbb80f633a37_Showcase%20Image%202-p-800.webp 800w, https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e2d01fbb80f633a37_Showcase%20Image%202-p-1080.webp 1080w, https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af752e2d01fbb80f633a37_Showcase%20Image%202.webp 1164w"
+                                    alt="Showcase image" class="showcase-image"></div>
                         </div>
                     </div>
                 </div>
             </section>
+            
             <section class="section-global-cta">
                 <div class="section-padding">
                     <div class="w-layout-blockcontainer container w-container">

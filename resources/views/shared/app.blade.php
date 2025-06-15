@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <div class="page-wrapper">
         <nav class="navbar">
             <div class="container">

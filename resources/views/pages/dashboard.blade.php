@@ -4,8 +4,8 @@
     <!-- Welcome Message -->
     <div class="flex flex-row justify-center mt-5">
         <div class="max-w-3xl">
-            <img src="{{ asset('logo.png') }}" class="py-2" style="height:80px;" />
-            <h3 style="font-family: 'Supreme-Bold' ;" class="text-gray-100 text-2xl">Hello! I'm your AI assistant. How can I help you today?</h3>
+            <img src="{{ asset('logo.png') }}" class="py-3 px-3 bg-gray-600 rounded-xl" style="height:80px;" />
+            <h3 style="font-family: 'Supreme-Bold' ;" class="text-gray-100 text-2xl mt-2">Hello! I'm your AI assistant. How can I help you today?</h3>
         </div>
     </div>
 </div>
