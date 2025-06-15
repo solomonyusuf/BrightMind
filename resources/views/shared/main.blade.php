@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrightMind Chat Interface</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'chat-bg': '#343541',
-                        'sidebar-bg': '#202123',
-                        'chat-input': '#40414f',
+                        'chat-bg': '#212121',
+                        'sidebar-bg': '#181818',
+                        'chat-input': '#303030',
                         'user-bg': '#343541',
                         'ai-bg': '#444654'
                     }
@@ -20,6 +21,9 @@
             }
         }
     </script>
+        <link
+        href="{{ asset('css/supreme.css') }}"
+        rel="stylesheet" />
     <style>
         /* Custom scrollbar */
         .custom-scrollbar::-webkit-scrollbar {
@@ -35,10 +39,15 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: #777;
         }
+        body
+        {
+            font-family: 'Supreme-Regular', sans-serif;
+            
+        }
     </style>
     @livewireStyles
 </head>
-<body class="bg-chat-bg text-white font-sans overflow-hidden">
+<body class="bg-chat-bg text-white  overflow-hidden">
     <div class="flex h-screen">
         <!-- Sidebar -->
         <div id="sidebar" class="w-64 bg-sidebar-bg border-r border-gray-600 flex flex-col transition-transform duration-300 ease-in-out">
@@ -142,7 +151,35 @@
         </div>
 
         <!-- Main Chat Area -->
-        {{ $slot }}
+        <div class="flex-1 flex flex-col bg-chat-bg">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-4 border-b border-gray-600">
+                <div class="flex items-center space-x-3">
+                    <button id="toggleSidebar" class="p-2 hover:bg-gray-700 rounded-lg transition-colors md:hidden">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-gray-500 py-4 px-2 rounded-full flex items-center justify-center">
+                            <img src="{{ asset('icon.png') }}" style="height:50px;" />
+                        </div>
+                        <div>
+                            <h1 class="text-lg font-semibold">BrightMind</h1>
+                            <p class="text-sm text-gray-400">AI Course Recommender</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="p-2 hover:bg-gray-700 rounded-lg transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                    </svg>
+                </button>
+            </div>
+
+            {{ $slot }}
+        </div>
+        
     </div>
 
     @livewireScripts

@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\UploadController;
 use App\Livewire\Auth\LoginPage;
 use App\Livewire\Auth\RegisterPage;
 use App\Livewire\Auth\ResetPage;
 use App\Livewire\Pages\ContactPage;
 use App\Livewire\Pages\Dashboard;
 use App\Livewire\Pages\HomePage;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -45,15 +47,15 @@ use Illuminate\Support\Facades\Route;
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
-        // $user = User::create([
-        //     'image' => UploadController::UploadFile($request),
-        //     'first_name' => $validated['first_name'],
-        //     'last_name' => $validated['last_name'],
-        //     'email' => $validated['email'],
-        //     'password' => Hash::make($validated['password']),
-        // ]);
+        $user = User::create([
+            'image' => UploadController::UploadFile($request),
+            'first_name' => $validated['first_name'],
+            'last_name' => $validated['last_name'],
+            'email' => $validated['email'],
+            'password' => bcrypt($validated['password']),
+        ]);
 
-        // auth()->login($user);
+        auth()->login($user);
 
         return redirect('/dashboard');
 

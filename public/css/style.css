@@ -1,7 +1,9 @@
+@import url('./supreme.css');
+
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: sans-serif;
+  font-family: "Supreme Regular";
 }
 
 body {
