@@ -2,12 +2,16 @@
 
 namespace App\Livewire\Pages;
 
+use App\Models\Chat;
 use Exception;
 use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 
 class Dashboard extends Component
 {
+    public $id;
+    public $chat;
+    public $streamedContent;
     public $processing = false;
     public $messages = [];
     public $messageInput = '';
@@ -16,6 +20,14 @@ class Dashboard extends Component
         'messageInput' => 'required|string'
     ];
 
+    public function mount($id = null)
+    {
+        $this->id = $id;
+        if($id)
+        {
+            $this->chat = Chat::find($id);
+        }
+    }
     public function sendMessage()
 {
     $this->validate();
@@ -38,7 +50,7 @@ class Dashboard extends Component
     $this->dispatch('start-sse-stream', messageId: uniqid());
     
     // Start SSE streaming in a separate process/job
-    $this->streamAIResponse($messageInput);
+    $this->streamAIResponse();
 }
 
 public function streamAIResponse()
@@ -73,6 +85,7 @@ public function streamAIResponse()
                 - Do not use asterisks (*), underscores (_), or hash symbols (#) for emphasis
                 - Do not use bullet points with symbols, use simple dashes or numbers instead
                 - Write in clear, conversational paragraphs
+                - Sometimes ask for their list of courses to help users make a good choice.
                 - Use line breaks for readability but avoid special formatting characters
                 - Present information in a natural, readable format suitable for direct display to users"
                         ],
@@ -87,6 +100,8 @@ public function streamAIResponse()
                     'stream' => true
                 ];
     
+    
+
     try {
         // Initialize cURL for streaming
         $ch = curl_init();
@@ -109,7 +124,15 @@ public function streamAIResponse()
         
         // Execute the streaming request
         curl_exec($ch);
-        
+           
+        Chat::create([
+                'user_id' => auth()?->user()?->id,
+                'messages'=> json_encode([
+                    'payload'=> $messageInput,
+                    'response'=> $this->streamedContent
+                ])
+            ]);
+            
         if (curl_error($ch)) {
             $this->sendSSEData('error', ['message' => curl_error($ch)]);
         }
@@ -118,7 +141,8 @@ public function streamAIResponse()
         
         // Send completion event
         $this->sendSSEData('stream-end', ['status' => 'completed']);
-        
+     
+       
     } catch (Exception $e) {
         $this->sendSSEData('error', ['message' => $e->getMessage()]);
     } finally {
@@ -145,7 +169,7 @@ private function handleStreamData($ch, $data)
             
             if (isset($decoded['choices'][0]['delta']['content'])) {
                 $content = $decoded['choices'][0]['delta']['content'];
-                
+                  $this->streamedContent .= $content;
                 // Send the content chunk via SSE
                 $this->sendSSEData('message-chunk', [
                     'content' => $content,

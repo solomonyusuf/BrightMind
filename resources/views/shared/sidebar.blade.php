@@ -12,70 +12,53 @@
             <!-- Chat History -->
             <div class="flex-1 overflow-y-auto custom-scrollbar p-2">
                 <div class="space-y-1" id="chatHistory">
+                   
+                    @if(isset($recent))
                     <!-- Recent Chats -->
                     <div class="text-xs font-semibold text-gray-400 px-3 py-2">Recent</div>
-                    <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors active" data-chat-id="current">
-                        <div class="flex items-center space-x-2">
+                   @foreach ($recent as $data)
+                        <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors active" data-chat-id="current">
+                        <a wire:navigate href="{{ route('chat', $data->id) }}" class="flex items-center space-x-2">
                             <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.97 8.97 0 01-4.906-1.455L3 21l2.455-5.094A8.97 8.97 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"/>
                             </svg>
-                            <span class="text-sm truncate">Quantum Computing Explanation</span>
-                        </div>
+                            <span class="text-sm truncate">{{ Str::limit(json_decode($data->messages)?->payload, 30,'...') }}</span>
+                        </a>
                     </div>
-                    <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors" data-chat-id="chat1">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.97 8.97 0 01-4.906-1.455L3 21l2.455-5.094A8.97 8.97 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"/>
-                            </svg>
-                            <span class="text-sm truncate">JavaScript Best Practices</span>
-                        </div>
-                    </div>
-                    <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors" data-chat-id="chat2">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.97 8.97 0 01-4.906-1.455L3 21l2.455-5.094A8.97 8.97 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"/>
-                            </svg>
-                            <span class="text-sm truncate">Recipe for Chocolate Cake</span>
-                        </div>
-                    </div>
+                   @endforeach
+                   @endif
+                    
+                    
 
+                    @if(isset($yesterday))
                     <!-- Yesterday -->
                     <div class="text-xs font-semibold text-gray-400 px-3 py-2 mt-4">Yesterday</div>
-                    <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors" data-chat-id="chat3">
-                        <div class="flex items-center space-x-2">
+                     @foreach ($yesterday as $data)
+                        <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors active" data-chat-id="current">
+                        <a wire:navigate href="{{ route('chat', $data->id) }}" class="flex items-center space-x-2">
                             <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.97 8.97 0 01-4.906-1.455L3 21l2.455-5.094A8.97 8.97 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"/>
                             </svg>
-                            <span class="text-sm truncate">Python Data Analysis</span>
-                        </div>
+                            <span class="text-sm truncate">{{ Str::limit(json_decode($data->messages)?->payload, 30,'...') }}</span>
+                        </a>
                     </div>
-                    <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors" data-chat-id="chat4">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.97 8.97 0 01-4.906-1.455L3 21l2.455-5.094A8.97 8.97 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"/>
-                            </svg>
-                            <span class="text-sm truncate">Travel Planning Tips</span>
-                        </div>
-                    </div>
-
+                   @endforeach
+                    @endif
+                    
+                   @if(isset($previous))
                     <!-- Previous 7 days -->
                     <div class="text-xs font-semibold text-gray-400 px-3 py-2 mt-4">Previous 7 days</div>
-                    <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors" data-chat-id="chat5">
-                        <div class="flex items-center space-x-2">
+                     @foreach ($previous as $data)
+                        <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors active" data-chat-id="current">
+                        <a wire:navigate href="{{ route('chat', $data->id) }}" class="flex items-center space-x-2">
                             <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.97 8.97 0 01-4.906-1.455L3 21l2.455-5.094A8.97 8.97 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"/>
                             </svg>
-                            <span class="text-sm truncate">Machine Learning Basics</span>
-                        </div>
+                            <span class="text-sm truncate">{{ Str::limit(json_decode($data->messages)?->payload, 30,'...') }}</span>
+                        </a>
                     </div>
-                    <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors" data-chat-id="chat6">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.97 8.97 0 01-4.906-1.455L3 21l2.455-5.094A8.97 8.97 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"/>
-                            </svg>
-                            <span class="text-sm truncate">CSS Grid Layout Guide</span>
-                        </div>
-                    </div>
+                   @endforeach
+                   @endif
                 </div>
             </div>
 
