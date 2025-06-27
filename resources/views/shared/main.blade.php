@@ -49,7 +49,7 @@
 </head>
 <body class="bg-chat-bg text-white  overflow-hidden">
     @include('sweetalert::alert')
-    <div class="flex h-screen">
+    <div  x-data="{ sidebarOpen: false }" class="flex h-screen">
         <!-- Sidebar -->
         @livewire('shared.sidebar')
 
@@ -58,7 +58,7 @@
             <!-- Header -->
             <div class="flex items-center justify-between p-4 border-b border-gray-600">
                 <div class="flex items-center space-x-3">
-                    {{-- <button id="toggleSidebar" class="p-2 hover:bg-gray-700 rounded-lg transition-colors md:hidden">
+                    {{-- <button id="toggleSidebar" @click="sidebarOpen = !sidebarOpen" class="p-2 hover:bg-gray-700 rounded-lg transition-colors md:hidden">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
@@ -542,6 +542,21 @@
             new ChatSSE();
         });
     </script>
+    <script>
+    const toggleButton = document.getElementById('toggleSidebar');
+    const sidebar = document.getElementById('sidebar');
+
+    toggleButton.addEventListener('click', () => {
+        if (sidebar.classList.contains('hidden')) {
+            sidebar.classList.remove('hidden');
+            sidebar.classList.add('flex');
+        } else {
+            sidebar.classList.remove('flex');
+            sidebar.classList.add('hidden');
+        }
+    });
+</script>
+
     
 </body>
 </html>
