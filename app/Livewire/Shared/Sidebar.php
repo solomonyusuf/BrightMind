@@ -18,9 +18,9 @@ class Sidebar extends Component
     {
         $this->user = User::find(auth()?->user()?->id);
         
-        $this->recent = Chat::whereDate('created_at', '=', Carbon::today())->get();
-        $this->yesterday = Chat::whereDate('created_at', '=',Carbon::yesterday())->get();
-        $this->previous = Chat::whereDate('created_at', '<', Carbon::yesterday())->get();
+        $this->recent = Chat::where(['user_id' => auth()?->user()?->id])->whereDate('created_at', '=', Carbon::today())->get();
+        $this->yesterday = Chat::where(['user_id' => auth()?->user()?->id])->whereDate('created_at', '=',Carbon::yesterday())->get();
+        $this->previous = Chat::where(['user_id' => auth()?->user()?->id])->whereDate('created_at', '<', Carbon::yesterday())->get();
     }
     public function render()
     {
