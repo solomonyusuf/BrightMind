@@ -35,15 +35,18 @@
                         <div class="navbar-menu-canvas-tray-only"><a href="/" aria-label="Brand Logo"
                                 aria-current="page" class="brand w-inline-block w--current"><img
                                     src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af50daa967ed79e69af963_Navbar%20Logo.png"
-                                    loading="lazy" alt="brand logo" /></a>
-                            <div data-w-id="68d3cf6f-bf63-ccc4-f678-e260212178df" class="navbar-close"><svg
+                                    loading="lazy" alt="brand logo" />
+                                </a>
+                            <button id="sidebar-toggle" style="border:0;background:transparent;" class="navbar-close">
+                                <svg
                                     xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 19 18" fill="none"
                                     class="nav-cross-icon">
                                     <path d="M1 17L17.4805 1.66661" stroke="currentColor" stroke-width="1.5"
                                         stroke-linecap="round"></path>
                                     <path d="M1 1L17.4805 16.3334" stroke="currentColor" stroke-width="1.5"
                                         stroke-linecap="round"></path>
-                                </svg></div>
+                                </svg>
+                            </button>
                         </div>
                         <ul role="list" class="nav-menu-list">
                             <li class="nav-menu-list-item">
@@ -160,6 +163,12 @@
     <script
         src="{{ asset('js/script3.js') }}"
         type="text/javascript"></script>
+    <script>
+        document.getElementById('sidebar-toggle').addEventListener('click', () => {
+        document.getElementById('sidebar').classList.toggle('-translate-x-full');
+        });
+
+    </script>
 </body>
 
 </html>

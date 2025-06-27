@@ -58,11 +58,11 @@
             <!-- Header -->
             <div class="flex items-center justify-between p-4 border-b border-gray-600">
                 <div class="flex items-center space-x-3">
-                    <button id="toggleSidebar" class="p-2 hover:bg-gray-700 rounded-lg transition-colors md:hidden">
+                    {{-- <button id="toggleSidebar" class="p-2 hover:bg-gray-700 rounded-lg transition-colors md:hidden">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
-                    </button>
+                    </button> --}}
                     <div class="flex items-center space-x-3">
                         <div class="w-8 h-8 bg-gray-500 py-4 px-2 rounded-full flex items-center justify-center">
                             <img src="{{ asset('icon.png') }}" style="height:50px;" />

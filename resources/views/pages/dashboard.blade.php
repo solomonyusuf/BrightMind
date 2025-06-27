@@ -14,7 +14,7 @@
      </style>
      <div class="flex flex-col">
         <!-- Chat Messages Container -->
-        <div id="chatContainer" style="max-height: 350px;overflow: scroll;" class="flex-1 overflow-y-auto h-100 custom-scrollbar p-4 space-y-4">
+        <div id="chatContainer" style="max-height: 350px;overflow: scroll;" class="flex-1 overflow-y-auto overflow-x-hidden h-100 custom-scrollbar p-4 space-y-4">
             @if(!isset($chat))
                  <!-- Welcome Message -->
                 <div id="welcomeMessage" class="flex flex-row justify-center mt-5">
