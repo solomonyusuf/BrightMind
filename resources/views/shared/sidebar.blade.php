@@ -1,4 +1,4 @@
-<div id="sidebar" class="sidebar hidden md:flex w-64 bg-sidebar-bg border-r border-gray-600 flex flex-col transition-transform duration-300 ease-in-out">
+<div id="sidebar" class="w-64 bg-sidebar-bg border-r border-gray-600 flex flex-col transition-transform duration-300 ease-in-out">
             <!-- Sidebar Header -->
             <div class="p-4 border-b border-gray-600">
                 <a wire:navigate href="{{ route('dashboard') }}" class="w-full flex items-center justify-center space-x-2 bg-transparent border border-gray-600 hover:bg-gray-700 text-white p-3 rounded-lg transition-colors">

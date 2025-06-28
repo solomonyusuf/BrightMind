@@ -49,7 +49,7 @@
 </head>
 <body class="bg-chat-bg text-white  overflow-hidden">
     @include('sweetalert::alert')
-    <div  x-data="{ sidebarOpen: false }" class="flex h-screen">
+    <div class="flex h-screen">
         <!-- Sidebar -->
         @livewire('shared.sidebar')
 
@@ -58,7 +58,7 @@
             <!-- Header -->
             <div class="flex items-center justify-between p-4 border-b border-gray-600">
                 <div class="flex items-center space-x-3">
-                    {{-- <button id="toggleSidebar" @click="sidebarOpen = !sidebarOpen" class="p-2 hover:bg-gray-700 rounded-lg transition-colors md:hidden">
+                    {{-- <button id="toggleSidebar" class="p-2 hover:bg-gray-700 rounded-lg transition-colors md:hidden">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
@@ -83,13 +83,10 @@
                     <!-- Dropdown -->
                     <div x-show="open" @click.away="open = false" class="absolute right-0 top-full mt-2 w-40 bg-white rounded-md shadow-lg z-50">
                         <a href="{{ route('logout') }}" 
-                        onclick="event.preventDefault(); document.getElementById('logout-form2').submit();"
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                             Logout
                         </a>
-                        <form id="logout-form2" method="POST" action="{{ route('logout') }}" class="hidden">
-                            @csrf
-                        </form>
+                      
                     </div>
                 </div>
 
@@ -542,21 +539,6 @@
             new ChatSSE();
         });
     </script>
-    <script>
-    const toggleButton = document.getElementById('toggleSidebar');
-    const sidebar = document.getElementById('sidebar');
-
-    toggleButton.addEventListener('click', () => {
-        if (sidebar.classList.contains('hidden')) {
-            sidebar.classList.remove('hidden');
-            sidebar.classList.add('flex');
-        } else {
-            sidebar.classList.remove('flex');
-            sidebar.classList.add('hidden');
-        }
-    });
-</script>
-
     
 </body>
 </html>
