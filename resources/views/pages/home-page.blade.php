@@ -11,8 +11,7 @@
                             <div class="home-hero-discription">
                                 <p data-w-id="1a1acfd8-dbfa-2949-c97f-d30b9cb39376"
                                     style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;">
-                                    Discover top online courses to upgrade your skills and stay ahead. Learn from
-                                    experts and enhance your expertise at your own pace.</p>
+                                    Discover a course recommendation assistant that helps you make informed decisions about your courses or academic advise.</p>
                             </div>
                             <div data-w-id="22bcecd8-91ae-ed40-a968-67856c9cfa20"
                                 style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;"
@@ -72,7 +71,7 @@
                                             loading="lazy" alt="Showcase Profile" class="profile-image move-left"><img
                                             src="https://cdn.prod.website-files.com/67ae25e5b332f13dff9ebd8d/67af795e1227a554f85d4173_Profile1.png"
                                             loading="lazy" alt="Showcase Profile" class="profile-image move-left"></div>
-                                    <h2 class="text-xlarge">We have 40+ Students</h2>
+                                    <h2 class="text-xlarge">We have 20+ Students</h2>
                                 </div>
                                 <div class="showcase-contents bottom">
                                     <h2 class="text-xlarge normal-case">“Education is the most powerful weapon which you can use to change the world.”</h2>
