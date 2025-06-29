@@ -65,7 +65,7 @@
                     </button> --}}
                     <div class="flex items-center space-x-3">
                         <div class="w-8 h-8 bg-gray-500 py-4 px-2 rounded-full flex items-center justify-center">
-                            <img src="{{ asset('icon.png') }}" style="height:50px;" />
+                            <img src="{{ asset('icon.png') }}" style="height:30px;" />
                         </div>
                         <div>
                             <h1 class="text-lg font-semibold">BrightMind</h1>
