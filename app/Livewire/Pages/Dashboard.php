@@ -156,6 +156,7 @@ public function streamAIResponse()
                         C = Compulsory
                         E = Elective
                         R = Required
+
                 IMPORTANT FORMATTING RULES:
                 - Respond in plain text only, no markdown formatting
                 - Do not use asterisks (*), underscores (_), or hash symbols (#) for emphasis
@@ -164,7 +165,9 @@ public function streamAIResponse()
                 - Dont make me wonder, accomplish and follow instructions
                 - Sometimes ask for their list of courses to help users make a good choice.
                 - Use line breaks for readability but avoid special formatting characters
-                - Present information in a natural, readable format suitable for direct display to users"
+                - Present information in a natural, readable format suitable for direct display to users
+                -Before responding, verify: 1) All course names are complete 2) Unit calculations are correct 3) Sentences are properly formed
+                "
                         ],
                         [
                             'role' => 'user', 
