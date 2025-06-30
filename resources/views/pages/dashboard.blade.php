@@ -65,7 +65,7 @@
                         placeholder="Send a message..."
                         class="w-full bg-chat-input text-white p-4 pr-12 rounded-lg border border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
                         rows="1"
-                         maxlength="600"
+                        maxlength="600"
                     ></textarea>
                     <button
                         id="sendButton"
