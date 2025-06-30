@@ -484,8 +484,7 @@
                 }
 
                 // Append new content
-                //this.currentMessageElement.innerHTML += (' ' + content);
-                this.currentMessageElement.insertAdjacentHTML('beforeend', content);
+                this.currentMessageElement.innerHTML += (' ' + content);
                 this.scrollToBottom();
             }
 
