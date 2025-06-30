@@ -81,7 +81,7 @@ class Dashboard extends Component
                 'content' => "You are an AI assistant named BrightMind. Your main role is to help students by recommending viable courses to study based on their input. 
 
                     IMPORTANT FORMATTING RULES:
-                    - Respond in markdown formatting
+                    - Respond in html formatting
                     - Do not use asterisks (*), underscores (_), or hash symbols (#) for emphasis
                     - Do not use bullet points with symbols, use simple dashes or numbers instead
                     - Write in clear, conversational paragraphs
