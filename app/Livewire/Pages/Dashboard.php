@@ -84,7 +84,8 @@ public function streamAIResponse()
                 - Respond in plain text only, no markdown formatting
                 - Do not use asterisks (*), underscores (_), or hash symbols (#) for emphasis
                 - Do not use bullet points with symbols, use simple dashes or numbers instead
-                - Write in clear, conversational paragraphs
+                - Write in clear, conversational paragraphs, avoid wrong spelling and omitting content 
+                - Dont make me wonder, accomplish and follow instructions
                 - Sometimes ask for their list of courses to help users make a good choice.
                 - Use line breaks for readability but avoid special formatting characters
                 - Present information in a natural, readable format suitable for direct display to users"
