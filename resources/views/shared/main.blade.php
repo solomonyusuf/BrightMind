@@ -98,6 +98,8 @@
     </div>
 
     @livewireScripts
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <script>
         const messageInput = document.getElementById('messageInput');
         const sendButton = document.getElementById('sendButton');
@@ -430,7 +432,8 @@
 
                 this.eventSource.addEventListener('message-chunk', (event) => {
                     const data = JSON.parse(event.data);
-                    this.appendToAIMessage(data.content);
+                    const htmlContent = marked.parse(data.content); // Convert markdown to HTML
+                    this.appendToAIMessage(htmlContent);
                 });
 
                 this.eventSource.addEventListener('stream-end', (event) => {
