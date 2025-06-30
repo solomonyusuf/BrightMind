@@ -432,8 +432,7 @@
 
                 this.eventSource.addEventListener('message-chunk', (event) => {
                     const data = JSON.parse(event.data);
-                    const htmlContent = marked.parse(data.content); // Convert markdown to HTML
-                    this.appendToAIMessage(htmlContent);
+                    this.appendToAIMessage(data.content);
                 });
 
                 this.eventSource.addEventListener('stream-end', (event) => {
