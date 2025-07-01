@@ -163,14 +163,10 @@ public function streamAIResponse()
                 -Before responding, verify: 1) All course names are complete 2) Unit calculations are correct 3) Sentences are properly formed
                 "
                         ]
-                        // [
-                        //     'role' => 'user', 
-                        //     'content' => 
-                        // ],
                     ],
-                    'temperature' => 0.7, 
-                    'top_p' => 0.9,       
-                    'max_tokens' => 5000,  
+                    'temperature' => 1.0, 
+                    'top_p' => 1.0,       
+                    'max_tokens' => 2000,  
                     'stream' => true
                 ];
     
