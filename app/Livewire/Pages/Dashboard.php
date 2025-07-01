@@ -165,7 +165,8 @@ public function streamAIResponse()
                 - Use line breaks for readability but avoid special formatting characters
                 - Present information in a natural, readable format suitable for direct display to user
                 - when writing the courses use Uppercase to write them
-                -Before responding, verify: 1) All course names are complete 2) Unit calculations are correct 3) Sentences are properly formed
+                -Before responding, verify All course names are complete, Unit calculations are correct , Sentences are properly formed
+                - I do not need to recorrect or reinstruct you to do the right thing.modification
                 "
                         ]
                     ],
