@@ -78,7 +78,7 @@ public function streamAIResponse()
     'messages' => [
         [
             'role' => 'system', 
-            'content' => "You are an AI assistant named BrightMind. Your main role is to help students by recommending viable courses to study based on their input. 
+            'content' => "You are an AI assistant named BrightMind. Your main role is to help students by recommending viable courses to study based on this input {$messageInput}. 
                 SEE COURSES:
                     100 Level Courses
 
@@ -160,19 +160,13 @@ public function streamAIResponse()
                 IMPORTANT FORMATTING RULES:
                 - Respond in plain text only, no markdown formatting
                 - Do not use asterisks (*), underscores (_), or hash symbols (#) for emphasis
-                - Do not use bullet points with symbols, use simple dashes or numbers instead
-                - Write in clear, conversational paragraphs, avoid wrong spelling and omitting content 
-                - Dont make me wonder, accomplish and follow instructions
-                - Sometimes ask for their list of courses to help users make a good choice.
-                - Use line breaks for readability but avoid special formatting characters
-                - Present information in a natural, readable format suitable for direct display to users
                 -Before responding, verify: 1) All course names are complete 2) Unit calculations are correct 3) Sentences are properly formed
                 "
-                        ],
-                        [
-                            'role' => 'user', 
-                            'content' => $messageInput
-                        ],
+                        ]
+                        // [
+                        //     'role' => 'user', 
+                        //     'content' => 
+                        // ],
                     ],
                     'temperature' => 0.7, 
                     'top_p' => 0.9,       
