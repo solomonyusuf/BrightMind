@@ -166,7 +166,7 @@ public function streamAIResponse()
                 - Present information in a natural, readable format suitable for direct display to user
                 - when writing the courses use Uppercase to write them
                 -Before responding, verify All course names are complete, Unit calculations are correct , Sentences are properly formed
-                - I do not need to recorrect or reinstruct you to do the right thing.modification
+                - I do not need to recorrect or reinstruct you to do the right thing
                 "
                         ]
                     ],
