@@ -63,13 +63,35 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
                     </button> --}}
+                     <div x-data="{ open: false }" class="relative">
+                            <button @click="open = !open" class="block md:hidden p-2 hover:bg-gray-700 rounded-lg transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                                </svg>
+                            </button>
+
+
+                            <!-- Dropdown -->
+                            <div x-show="open" @click.away="open = false" class="absolute left-10 top-full mt-2 w-40 bg-white rounded-md shadow-lg z-50">
+                                <a href="{{ route('dashboard') }}" 
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    Chat Dashboard
+                                </a>
+                                <a href="{{ route('dashboard') }}" 
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    Courses
+                                </a>
+                            
+                            </div>
+                    </div>
+
                     <div class="flex items-center space-x-3">
                         <div class="w-8 h-8 bg-gray-500 py-4 px-2 rounded-full flex items-center justify-center">
                             <img src="{{ asset('icon.png') }}" style="height:30px;" />
                         </div>
                         <div>
                             <h1 class="text-lg font-semibold">BrightMind</h1>
-                            <p class="text-sm text-gray-400">AI Course Recommender</p>
+                            <p class="text-sm text-gray-400">AI Powered LMS</p>
                         </div>
                     </div>
                 </div>

@@ -4,8 +4,11 @@ use App\Http\Controllers\UploadController;
 use App\Livewire\Auth\LoginPage;
 use App\Livewire\Auth\RegisterPage;
 use App\Livewire\Auth\ResetPage;
+use App\Livewire\Pages\AllCourses;
 use App\Livewire\Pages\ContactPage;
+use App\Livewire\Pages\CreateCourses;
 use App\Livewire\Pages\Dashboard;
+use App\Livewire\Pages\EditCourses;
 use App\Livewire\Pages\HomePage;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -17,6 +20,13 @@ use Illuminate\Support\Facades\Route;
     Route::middleware(['auth'])->group(function(){
         Route::get('/dashboard', Dashboard::class)->name('dashboard');
         Route::get('/chat/{id}', Dashboard::class)->name('chat');
+        Route::get('/all-course', AllCourses::class)->name('all_courses');
+        Route::get('/create-course', CreateCourses::class)->name('create_course');
+        Route::get('/edit-course/{id}', EditCourses::class)->name('edit_course');
+        
+        
+        Route::post('/post-course', [CreateCourses::class, 'create'])->name('post_course');
+        Route::get('/delete-course/{id}', [CreateCourses::class, 'delete'])->name('delete_course');
     });
     
     //Auth

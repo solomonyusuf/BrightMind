@@ -10,10 +10,34 @@
             </div>
 
             <!-- Chat History -->
-            <div class="flex-1 overflow-y-auto custom-scrollbar p-2">
+            <div class="flex-1 overflow-y-auto custom-scrollbar p-2" style="height:100%;overflow:scroll;">
                 <div class="space-y-1" id="chatHistory">
+                   <!-- All Courses -->
+                <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors active {{ Route::is('all_course') ? 'bg-gray-700' : '' }}" data-chat-id="current">
+                    <a href="{{ route('all_courses') }}" class="flex items-center space-x-2">
+                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6V4m0 0a2 2 0 00-2-2H6a2 2 0 00-2 2v16a2 2 0 002 2h4a2 2 0 002-2v-2m0-12h6a2 2 0 012 2v12a2 2 0 01-2 2h-6" />
+                        </svg>
+                        <span class="text-sm truncate">All Courses</span>
+                    </a>
+                </div>
+
+                <!-- Create Course -->
+                <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors active {{ Route::is('create_course') ? 'bg-gray-700' : '' }}" data-chat-id="current">
+                    <a href="{{ route('create_course') }}" class="flex items-center space-x-2">
+                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4v16m8-8H4" />
+                        </svg>
+                        <span class="text-sm truncate">Create Course</span>
+                    </a>
+                </div>
+
+                
+                    <div class="text-xs font-bold uppercase text-white-400 px-3 py-2">Chat History</div>
                    
-                    @if(isset($recent))
+                    @if(isset($recent) && count($recent) > 0)
                     <!-- Recent Chats -->
                     <div class="text-xs font-semibold text-gray-400 px-3 py-2">Recent</div>
                    @foreach ($recent as $data)
@@ -30,7 +54,7 @@
                     
                     
 
-                    @if(isset($yesterday))
+                    @if(isset($yesterday) && count($yesterday) > 0)
                     <!-- Yesterday -->
                     <div class="text-xs font-semibold text-gray-400 px-3 py-2 mt-4">Yesterday</div>
                      @foreach ($yesterday as $data)
@@ -45,7 +69,7 @@
                    @endforeach
                     @endif
                     
-                   @if(isset($previous))
+                   @if(isset($previous) && count($previous) > 0)
                     <!-- Previous 7 days -->
                     <div class="text-xs font-semibold text-gray-400 px-3 py-2 mt-4">Previous 7 days</div>
                      @foreach ($previous as $data)
