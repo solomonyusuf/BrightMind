@@ -17,7 +17,7 @@
     <!-- Meta Data -->
     <div>
         <label for="meta_data" class="block text-sm font-medium text-gray-300">Description (Optional)</label>
-        <textarea id="meta_data" name="description" rows="3" class="mt-1 block w-full bg-gray-700 text-white border border-gray-600 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <textarea id="meta_data" maxlength="255" name="description" rows="3" class="mt-1 block w-full bg-gray-700 text-white border border-gray-600 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
     </div>
 
     <!-- Link -->
