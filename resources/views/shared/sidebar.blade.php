@@ -23,6 +23,7 @@
                     </a>
                 </div>
 
+                @if(auth()?->user()?->role == 'instructor')
                 <!-- Create Course -->
                 <div class="chat-item px-3 py-2 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors active {{ Route::is('create_course') ? 'bg-gray-700' : '' }}" data-chat-id="current">
                     <a href="{{ route('create_course') }}" class="flex items-center space-x-2">
@@ -33,7 +34,7 @@
                         <span class="text-sm truncate">Create Course</span>
                     </a>
                 </div>
-
+                @endif
                 
                     <div class="text-xs font-bold uppercase text-white-400 px-3 py-2">Chat History</div>
                    

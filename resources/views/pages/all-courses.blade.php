@@ -36,9 +36,11 @@
               allowfullscreen
             ></iframe>
             <p class="text-sm font-semibold mt-1 text-center">{{ $video->title }}</p>
+             @if(auth()?->user()?->role == 'instructor')
             <a href="{{ route('delete_course', $video->id) }}" class="bg-red-600 hover:bg-red-700 text-white font-medium py-2 mb-3 px-4 rounded-lg transition duration-200">
              Delete
             </a>
+            @endif
           </div>
         @endforeach
       </div>

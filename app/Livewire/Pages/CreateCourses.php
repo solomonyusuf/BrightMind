@@ -33,6 +33,9 @@ class CreateCourses extends Component
     }
     public function render()
     {
+         if(auth()?->user()?->role != 'instructor')
+               return redirect()->back();
+
         return view('pages.create-courses')->layout('shared.main');
     }
 }
