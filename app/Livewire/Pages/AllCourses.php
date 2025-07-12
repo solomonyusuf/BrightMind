@@ -16,13 +16,23 @@ class AllCourses extends Component
     {
         $category = request()?->category;
 
-        $query = Course::select('id', 'title')->get();
+        $query = Course::get();
 
         if ($category) {
-            $this->videos = $this->generateCourse($category, $query);
-        } else {
-            $this->videos = $query;
-        }
+                $array = $this->generateCourse($category, $query);
+
+                $this->videos = []; // initialize as empty array
+
+                foreach ($array as $data) {
+                    $course = Course::find($data['id']);
+                    if ($course) {
+                        $this->videos[] = $course; // append to the videos array
+                    }
+                }
+            } else {
+                $this->videos = $query;
+            }
+
     }
 
     public function generateCourse($category, $courses)
