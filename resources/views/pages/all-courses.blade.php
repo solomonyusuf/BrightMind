@@ -24,10 +24,10 @@
         </select>
 
           <select id="levelDropdown" class="p-2 bg-chat-bg rounded border">
-            <option {{ request()?->level == 'easy' ? selected : '' }} value="{{ route('all_courses') }}?level=easy">100 Level</option>
-            <option  {{ request()?->level == 'medium' ? selected : '' }} value="{{ route('all_courses') }}?level=medium">200 Level</option>
-            <option  {{ request()?->level == 'hard' ? selected : '' }} value="{{ route('all_courses') }}?level=hard">300 Level</option>
-            <option  {{ request()?->level == 'difficult' ? selected : '' }} value="{{ route('all_courses') }}?level=difficult">400 Level</option>
+            <option {{ request()?->level == 'easy' ? 'selected' : '' }} value="{{ route('all_courses') }}?level=easy">100 Level</option>
+            <option  {{ request()?->level == 'medium' ? 'selected' : '' }} value="{{ route('all_courses') }}?level=medium">200 Level</option>
+            <option  {{ request()?->level == 'hard' ? 'selected' : '' }} value="{{ route('all_courses') }}?level=hard">300 Level</option>
+            <option  {{ request()?->level == 'difficult' ? 'selected' : '' }} value="{{ route('all_courses') }}?level=difficult">400 Level</option>
           </select>
       </div>
 
