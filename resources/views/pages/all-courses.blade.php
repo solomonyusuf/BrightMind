@@ -64,11 +64,10 @@
   });
 </script>
  <script>
-  const level = document.getElementById('levelDropdown');
-  level.addEventListener('change', function () {
-    const level = this.value;
-    if (selected) {
-      window.location.href = selected; 
+  document.getElementById('levelDropdown').addEventListener('change', function () {
+    const selectedUrl = this.value;
+    if (selectedUrl !== '#') {
+      window.location.href = selectedUrl;
     }
   });
 </script>
