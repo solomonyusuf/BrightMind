@@ -50,35 +50,34 @@ class AllCourses extends Component
         // Proper JSON encoding
         $courseJson = json_encode($courseArray);
 
-        $payload = [
+       $payload = [
     'model' => $model,
     'messages' => [
         [
             'role' => 'system',
             'content' => "
-                You are an expert course recommender. From the given course list below, return only the courses that match either the category '{$category}' or the level '{$level}'.
+                    You are an expert course recommender. From the given course list below, return only the courses that match either the category '{$category}' or the difficulty level '{$level}' (e.g., easy, medium, hard, difficult).
 
-                If no courses match, return an empty JSON array.
+                    If no courses match, return an empty JSON array.
 
-                Course List:
-                {$courseJson}
+                    Course List:
+                    {$courseJson}
 
-                Respond ONLY with a valid JSON array like:
-                [
-                {
-                    \"id\": 123,
-                    \"title\": \"Course Title\"
-                }
-                ]
-                "
-                        ]
-                    ],
-                    'temperature' => 0.7,
-                    'top_p' => 0.9,
-                    'max_tokens' => 1000,
-                    'stream' => false
-                ];
-
+                    Respond ONLY with a valid JSON array like:
+                    [
+                    {
+                        \"id\": 123,
+                        \"title\": \"Course Title\"
+                    }
+                    ]
+                    "
+                            ]
+                        ],
+                        'temperature' => 0.7,
+                        'top_p' => 0.9,
+                        'max_tokens' => 1000,
+                        'stream' => false
+                    ];
 
         try {
             $response = Http::withToken($apiKey)
