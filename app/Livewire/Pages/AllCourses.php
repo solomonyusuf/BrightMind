@@ -15,11 +15,12 @@ class AllCourses extends Component
     public function mount()
     {
         $category = request()?->category;
+        $level = request()?->level;
 
         $query = Course::get();
 
         if ($category) {
-                $array = $this->generateCourse($category, $query);
+                $array = $this->generateCourse($category, $level, $query);
 
                 $this->videos = []; // initialize as empty array
 
@@ -35,7 +36,7 @@ class AllCourses extends Component
 
     }
 
-    public function generateCourse($category, $courses)
+    public function generateCourse($category, $level, $courses)
     {
         $endpoint = env('GITHUB_MODEL_ENDPOINT');
         $apiKey = env('GITHUB_MODEL_KEY');
@@ -50,32 +51,34 @@ class AllCourses extends Component
         $courseJson = json_encode($courseArray);
 
         $payload = [
-            'model' => $model,
-            'messages' => [
+    'model' => $model,
+    'messages' => [
+        [
+            'role' => 'system',
+            'content' => "
+                You are an expert course recommender. From the given course list below, return only the courses that match either the category '{$category}' or the level '{$level}'.
+
+                If no courses match, return an empty JSON array.
+
+                Course List:
+                {$courseJson}
+
+                Respond ONLY with a valid JSON array like:
                 [
-                    'role' => 'system',
-                    'content' => "
-    You are an expert course recommender. From the given course list below, return only courses that match the category or level: {$category}.
-    If none match, return an empty JSON array.
-
-    Course List:
-    {$courseJson}
-
-    Respond ONLY with a valid JSON array like:
-    [
-    {
-        \"id\": 123,
-        \"title\": \"Course Title\"
-    }
-    ]
-    "
+                {
+                    \"id\": 123,
+                    \"title\": \"Course Title\"
+                }
                 ]
-            ],
-            'temperature' => 0.7,
-            'top_p' => 0.9,
-            'max_tokens' => 1000,
-            'stream' => false // Turn OFF streaming for easy parsing
-        ];
+                "
+                        ]
+                    ],
+                    'temperature' => 0.7,
+                    'top_p' => 0.9,
+                    'max_tokens' => 1000,
+                    'stream' => false
+                ];
+
 
         try {
             $response = Http::withToken($apiKey)
