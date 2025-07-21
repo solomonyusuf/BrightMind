@@ -65,7 +65,7 @@
 </script>
  <script>
   const level = document.getElementById('levelDropdown');
-  dropdown.addEventListener('change', function () {
+  level.addEventListener('change', function () {
     const level = this.value;
     if (selected) {
       window.location.href = selected; 
