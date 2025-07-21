@@ -55,7 +55,7 @@ class AllCourses extends Component
                 [
                     'role' => 'system',
                     'content' => "
-    You are an expert course recommender. From the given course list below, return only courses that match the category: {$category}.
+    You are an expert course recommender. From the given course list below, return only courses that match the category or level: {$category}.
     If none match, return an empty JSON array.
 
     Course List:

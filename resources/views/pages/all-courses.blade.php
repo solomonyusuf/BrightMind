@@ -22,6 +22,13 @@
           <option value="{{ route('all_courses') }}?category=history">History</option>
           <option value="{{ route('all_courses') }}?category=culture">Culture</option>
         </select>
+
+          <select id="levelDropdown" class="p-2 bg-chat-bg rounded border">
+            <option selected value="{{ route('all_courses') }}?level=100">100 Level</option>
+            <option value="{{ route('all_courses') }}?level=200">200 Level</option>
+            <option value="{{ route('all_courses') }}?level=300">300 Level</option>
+            <option value="{{ route('all_courses') }}?level=400">400 Level</option>
+          </select>
       </div>
 
 
@@ -51,6 +58,15 @@
   const dropdown = document.getElementById('categoryDropdown');
   dropdown.addEventListener('change', function () {
     const selected = this.value;
+    if (selected) {
+      window.location.href = selected; 
+    }
+  });
+</script>
+ <script>
+  const level = document.getElementById('levelDropdown');
+  dropdown.addEventListener('change', function () {
+    const level = this.value;
     if (selected) {
       window.location.href = selected; 
     }
