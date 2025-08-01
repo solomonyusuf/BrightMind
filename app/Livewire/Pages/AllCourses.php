@@ -24,12 +24,14 @@ class AllCourses extends Component
 
                 $this->videos = []; // initialize as empty array
 
+                if(isset($array)){
                 foreach ($array as $data) {
                     $course = Course::find($data['id']);
                     if ($course) {
                         $this->videos[] = $course; // append to the videos array
                     }
                 }
+            }
             } else {
                 $this->videos = $query;
             }
