@@ -75,9 +75,9 @@ class AllCourses extends Component
                     "
                             ]
                         ],
-                        'temperature' => 0.7,
-                        'top_p' => 0.9,
-                        'max_tokens' => 1000,
+                        'temperature' => 0.9,
+                        'top_p' => 0.1,
+                        'max_tokens' => 2048,
                         'stream' => false
                     ];
 
