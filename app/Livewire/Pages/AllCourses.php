@@ -75,15 +75,18 @@ class AllCourses extends Component
                     "
                             ]
                         ],
-                        'temperature' => 0.9,
-                        'top_p' => 0.1,
-                        'max_tokens' => 2048,
+                        'temperature' => 1.0,
+                        'top_p' => 1.0,
+                        'max_tokens' => 1000,
                         'stream' => false
                     ];
 
         try {
-            $response = Http::withToken($apiKey)
-                ->post($endpoint, $payload);
+            
+            $response = Http::withHeaders([
+                    'Content-Type' => 'application/json',
+                    'Authorization' => 'Bearer ' . $apiKey,
+                            ])->post($endpoint, $payload);
 
             if ($response->successful()) {
                 $result = $response->json();
