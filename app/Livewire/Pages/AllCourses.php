@@ -57,22 +57,27 @@ class AllCourses extends Component
     'messages' => [
         [
             'role' => 'system',
-            'content' => "
-                    You are an expert course recommender. From the given course list below, return only the courses that match either the category '{$category}' or the difficulty level '{$level}' (e.g., easy, medium, hard, difficult).
+           'content' => "
+                            You are an expert course recommender.
 
-                    If no courses match, return an empty JSON array.
+                            From the course list below, return only the courses that match either the category '{$category}' or the difficulty level '{$level}' (e.g., easy, medium, hard, difficult).
 
-                    Course List:
-                    {$courseJson}
+                            - If no courses match, return an empty JSON array.
 
-                    Respond ONLY with a valid JSON array like:
-                    [
-                    {
-                        \"id\": 123,
-                        \"title\": \"Course Title\"
-                    }
-                    ]
-                    "
+                            - Your response must be a valid JSON array only — with no explanation, no code block formatting, no triple quotes, and no extra text. Do NOT wrap the JSON in ``` or \"\"\".
+
+                            Course List:
+                            {$courseJson}
+
+                            Return format (only this, nothing else):
+                            [
+                            {
+                                \"id\": 123,
+                                \"title\": \"Course Title\"
+                            }
+                            ]
+                            "
+
                             ]
                         ],
                         'temperature' => 1.0,
@@ -88,10 +93,19 @@ class AllCourses extends Component
                     'Authorization' => 'Bearer ' . $apiKey,
                             ])->post($endpoint, $payload);
 
+
             if ($response->successful()) {
+
                 $result = $response->json();
                 $message = $result['choices'][0]['message']['content'] ?? '[]';
-                return json_decode($message, true); // convert JSON string to array
+
+                // Remove ALL triple quotes anywhere in the string
+                $cleanMessage = str_replace('"""', '', $message);
+
+                // Now decode
+                return json_decode($cleanMessage, true);
+
+
             } else {
                 logger()->error('Model API error', ['response' => $response->body()]);
                 return [];
